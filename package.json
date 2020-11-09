@@ -1,0 +1,82 @@
+{
+  "name": "benoit-lebrun",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "test": "jest --watch"
+  },
+  "dependencies": {
+    "axios": "^0.21.0",
+    "babel-core": "^6.26.3",
+    "babel-plugin-styled-components": "^1.11.1",
+    "flexboxgrid-sass": "^8.0.5",
+    "next": "9.5.5",
+    "node-sass": "^4.7.2",
+    "nprogress": "^0.2.0",
+    "react": "16.14.0",
+    "react-dom": "16.14.0",
+    "react-responsive-carousel": "^3.2.10",
+    "react-toggle-button": "^2.2.0",
+    "sass-flex-mixin": "^1.0.3",
+    "styled-components": "^5.2.0"
+  },
+  "devDependencies": {
+    "babel-jest": "^26.5.2",
+    "enzyme-to-json": "^3.5.0",
+    "isomorphic-fetch": "^3.0.0",
+    "jest": "^26.5.3"
+  },
+  "jest": {
+    "verbose": true
+  },
+  "//": "This is our babel config, I prefer this over a .babelrc file",
+  "babel": {
+    "env": {
+      "development": {
+        "presets": [
+          "next/babel"
+        ],
+        "plugins": [
+          [
+            "styled-components",
+            {
+              "ssr": true,
+              "displayName": true
+            }
+          ]
+        ]
+      },
+      "production": {
+        "presets": [
+          "next/babel"
+        ],
+        "plugins": [
+          [
+            "styled-components",
+            {
+              "ssr": true,
+              "displayName": true
+            }
+          ]
+        ]
+      },
+      "test": {
+        "presets": [
+          "next/babel"
+        ],
+        "plugins": [
+          [
+            "styled-components",
+            {
+              "ssr": true,
+              "displayName": true
+            }
+          ]
+        ]
+      }
+    }
+  }
+}
