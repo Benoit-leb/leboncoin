@@ -1,10 +1,18 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import Link from "next/link";
 import StyledNavbar from "./StyledNavbar";
 import StyledBurger from "./StyledBurger";
+import ToggleButton from "react-toggle-button";
+import {useGlobal} from "reactn";
 
 const NavBar = () => {
   const [statusMenu, setMenu] = useState(false);
+  const [theme, setTheme] = useGlobal("theme");
+
+  const onToggle = (status) => {
+    setTheme(status ? "dark" : "light");
+  };
+  
   return (
     <React.Fragment>
       <StyledBurger onClick={() => setMenu(!statusMenu)} className="js-test-burger">
@@ -50,6 +58,16 @@ const NavBar = () => {
               <div>Benoit</div>
             </a>
           </Link>
+        </li>
+        <li>
+          <ToggleButton
+            inactiveLabel="off"
+            activeLabel="on"
+            value={theme === "dark"}
+            onToggle={(status) => {
+              onToggle(!status);
+            }} />
+            <div>Dark mode :</div>
         </li>
       </StyledNavbar>
 

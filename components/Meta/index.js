@@ -8,7 +8,6 @@ const Meta = () => {
       <link rel="shortcut icon" href=""></link>
       <title>leboncoin TEST de Benoit Lebrun</title>
       <meta name="description" content="leboncoin TEST de Benoit Lebrun"/>
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
     </Head>
   );
 };

@@ -1,5 +1,4 @@
 import {createGlobalStyle} from "styled-components";
-import theme from "../../styles/theme.js";
 
 const GlobalStyle = createGlobalStyle`
   html {
@@ -11,14 +10,27 @@ const GlobalStyle = createGlobalStyle`
     box-sizing:inherit;
   }
   body {
+    background: ${({ theme }) => theme.background};
+    color: ${({ theme }) => theme.text};
     padding: 0;
     margin: 0;
     font-size: 1.5rem;
     line-height: 1.5;
   }
+  header{
+    background: ${({ theme }) => theme.background};
+    color: ${({ theme }) => theme.text};
+  }
+  svg{
+    fill: ${({ theme }) => theme.text};
+  }
+  ul{
+    background: ${({ theme }) => theme.background};
+    color: ${({ theme }) => theme.text};
+  }
   a {
     text-decoration: none;
-    color: ${theme.primary.text}
+    color: ${({ theme }) => theme.text};
   }
   .row{
   padding: 0 !important;

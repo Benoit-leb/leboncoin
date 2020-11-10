@@ -6,7 +6,7 @@ const StyledMessagerie = styled.section`
    margin: auto;
  & #container{
    margin: 2rem 0;
-   height:60vh;
+   height:50vh;
    overflow-y:auto;
    border:solid 1px ${theme.primary.brandColor};
    border-radius:8px;

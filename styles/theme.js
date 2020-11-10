@@ -10,7 +10,7 @@ export default {
     textBrand: "#fe6f0f",
   },
   secondary: {
-    background: "#ffffff",
+    background: "red",
     brandColor: "#fe6f0f",
     text: "#000000",
     textBrand: "#fe6f0f",

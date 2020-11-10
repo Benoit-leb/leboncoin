@@ -7,7 +7,6 @@ const StyledHeader = styled.header`
   top:0;
   width:100%;
   z-index:100;
-  background-color:${theme.primary.background};
   & .logo{
     height: 6rem;
     width: 14rem;
