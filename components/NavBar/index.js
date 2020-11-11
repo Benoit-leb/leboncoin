@@ -3,11 +3,12 @@ import Link from "next/link";
 import StyledNavbar from "./StyledNavbar";
 import StyledBurger from "./StyledBurger";
 import ToggleButton from "react-toggle-button";
-import {useGlobal} from "reactn";
+import useDarkMode from "../useDarkMode"
+
 
 const NavBar = () => {
   const [statusMenu, setMenu] = useState(false);
-  const [theme, setTheme] = useGlobal("theme");
+  const [theme, setTheme] = useDarkMode();
 
   const onToggle = (status) => {
     setTheme(status ? "dark" : "light");
