@@ -3,11 +3,11 @@ import { useGlobal, setGlobal} from "reactn";
 
 
 const useDarkMode = () => {
-  const [theme, setTheme] = useGlobal("theme");
+  const [theme, setMode] = useGlobal("theme");
   
-  const setMode = (mode) => {
+  const setTheme = (mode) => {
     window.localStorage.setItem("theme", mode)
-    setTheme(mode)
+    setMode(mode)
   };
 
   useEffect(() => {
@@ -16,12 +16,7 @@ const useDarkMode = () => {
     });
   }, []);
 
-  useEffect(() => {
-    if(theme) {
-      setMode(theme);
-    }
-  }, [theme]);
-  return [theme]
+  return [theme, setTheme]
 };
 
 export default useDarkMode;

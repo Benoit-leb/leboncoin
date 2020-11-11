@@ -47,15 +47,18 @@ const StyledNavbar = styled.ul`
       margin-right:1rem;
       display: inline-block;
       @media(min-width: ${theme.sm}){
-        display: inline-block;
+        margin-right:0;
         width:2rem;
       }
     }
     & div{
-      display:inline;
+      display: inline-flex !important;
+      margin-right: 1rem;
       font-size:1.5rem;
       @media(min-width: ${theme.sm}){
-        display:block;
+        display:flex !important;
+        margin-right:0;
+        margin-bottom:0.5rem;
         font-size:1rem;
       }
     }

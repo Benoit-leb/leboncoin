@@ -26,8 +26,8 @@ const formWithToggle = (props) => {
       </div>
       <div className="col-xs-7">
         <div>
-          <div className=" row middle-xs between-xs">
-            <div>statut : {status ? "private" : "public"}</div>
+          <div className=" row middle-xs end-xs">
+              <div className="status">statut private  : </div>
             <ToggleButton
               inactiveLabel="off"
               activeLabel="on"
